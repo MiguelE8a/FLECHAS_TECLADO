@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+canvas {
+  box-shadow: 0 0 10px #000;
+}
+
+/*# sourceMappingURL=style.css.map */
