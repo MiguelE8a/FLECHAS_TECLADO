@@ -2,8 +2,16 @@ let canvas = document.getElementById('canvas'),
 papel = canvas.getContext('2d'),
 color = document.getElementById('color'),
 width = document.querySelector('#width'),
+left = document.querySelector('.cuatro'),
+right = document.querySelector('.seis'),
+up = document.querySelector('.dos'),
+down = document.querySelector('.ocho'),
 outputWidth = document.querySelector('.width-output');
 document.addEventListener('keydown', dibujar)
+left.addEventListener('mousedown', dibujarLeft)
+right.addEventListener('mousedown', dibujarRight)
+down.addEventListener('mousedown', dibujarDown)
+up.addEventListener('mousedown', dibujarUp)
 
 outputWidth.textContent = width.value
 
@@ -11,15 +19,40 @@ width.addEventListener('input', function(){
   outputWidth.textContent = width.value
 })
 
-
-console.log(papel)
-
 let x = 150, y = 150, movimiento = 10,
 xi = x, 
 yi = y, 
 xf = x, 
 yf = y;
 
+function dibujarLeft(){   
+      xi = xf
+      yi = yf 
+      xf -= movimiento
+      xi = xf+movimiento
+      dibujarLinea(xi, yi, xf, yf, papel, color.value, width.value)        
+}
+function dibujarRight(){
+  xi = xf
+  yi = yf
+  xf += movimiento
+  xi = xf - movimiento
+  dibujarLinea(xi, yi, xf, yf, papel, color.value, width.value)
+}
+function dibujarDown(){
+    xi = xf
+    yi = yf
+    yf += movimiento
+    yi = yf - movimiento
+    dibujarLinea(xi, yi, xf, yf, papel, color.value, width.value)
+}
+function dibujarUp(){
+    xi = xf
+    yi = yf
+    yf -= movimiento
+    yi = yf + movimiento
+    dibujarLinea(xi, yi, xf, yf, papel , color.value, width.value)
+}
 function dibujar(e){
   switch (e.keyCode){
     case 37:    
@@ -68,6 +101,5 @@ function dibujarLinea(xi, yi, xf, yf, lienzo, color, width){
   lienzo.lineTo(xf ,yf)
   lienzo.stroke()
   lienzo.closePath()
-  console.log(lienzo)
 }
 

@@ -55,9 +55,11 @@ canvas {
 }
 .contain-Controls .container-Inputs .container-range label {
   font-size: 1.6rem;
+  margin-right: 0.5rem;
 }
 .contain-Controls .container-Inputs .container-range output {
   font-size: 1.6rem;
+  margin-left: 0.5rem;
 }
 
 .container-Flechas {
