@@ -3,6 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+.main{
+  // align-self: center;
+  width: 100vw;
+  min-height: 100vh;
+  // text-align: center;
+}
+.container-Game{
+  // margin-top: 20px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
 canvas{
   box-shadow: 0 0 10px #000;
 }

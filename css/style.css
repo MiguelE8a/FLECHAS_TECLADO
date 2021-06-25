@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.main {
+  width: 100vw;
+  min-height: 100vh;
+}
+
 canvas {
   box-shadow: 0 0 10px #000;
 }
