@@ -1,13 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Boogaloo', cursive;
+  font-size: 62.5%;
 }
+// body{
+//   width: 100vw;
+//   display: inline;
+// }
 .main{
-  // align-self: center;
   width: 100vw;
   min-height: 100vh;
-  // text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-main{
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .container-Game{
   // margin-top: 20px;
@@ -17,4 +33,78 @@
 }
 canvas{
   box-shadow: 0 0 10px #000;
+}
+.contain-Controls{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .container-Inputs{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .contain-inputColor{
+      p{
+        font-size: 1.6rem;
+      }
+      #color{
+        width: 35px;
+      }
+    }
+
+    .container-range{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      label{
+        font-size: 1.6rem;
+      }
+      output{
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+.container-Flechas{
+  width: 60%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto auto;
+  div{
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 2.6rem;
+    // background-color: aqua;
+    margin: 0.2rem;
+  }
+}
+
+.flexCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.6rem;
+  border-radius: 1rem;
+}
+
+.border-button{
+  border: 0.1rem solid #ccc;
+}
+.dos{
+  transform: rotate(270deg);
+
+}
+.cuatro{
+  transform: rotate(180deg);
+}
+.ocho{
+ transform: rotate(90deg);
+}
+#canvas{
+  border-radius: 2rem;
 }
